@@ -429,5 +429,9 @@ body {
     top: 150px !important;
     left: 800px !important;
   }
+  .error {
+    position: absolute;
+    left: 770px !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
