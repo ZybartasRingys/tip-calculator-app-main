@@ -13,16 +13,25 @@
     />
     <link rel="stylesheet" href="./scss/main.css" />
 
-    <title>Frontend Mentor | Tip calculator app</title>
+    <title>Coded By ZR | Tip calculator app</title>
   </head>
   <body>
     <section class="main-section">
+      <h1 class="splitter">splitter</h1>
       <div class="card">
+        <!-- Bill input  -->
         <div class="bill-side">
-          <div class="bill-input">
+          <div class="bill">
             <label class="bill-label" for="number">Bill</label>
-            <input class="bill-input" placeholder="$" />
+            <input
+              class="bill-input"
+              id="bill-input"
+              type="number"
+              placeholder="0"
+            />
           </div>
+
+          <!-- tips input -->
 
           <div class="tips">
             <div class="tips-header">
@@ -30,46 +39,60 @@
             </div>
 
             <div class="tips-container">
-              <div class="tip">
-                <p>5%</p>
-              </div>
-              <div class="tip">
-                <p>10%</p>
-              </div>
-              <div class="fiftheen">
-                <p>15%</p>
-              </div>
-              <div class="tip">
-                <p>25%</p>
-              </div>
-              <div class="tip">
-                <p>50%</p>
-              </div>
+              <button class="tip" id="1-btn">5%</button>
+              <button class="tip" id="2-btn">10%</button>
+              <button class="tip" id="3-btn">15%</button>
+              <button class="tip" id="4-btn">25%</button>
+              <button class="tip" id="5-btn">50%</button>
+
               <div class="custom">
-                <p>Custom</p>
+                <input
+                  class="custom-tips"
+                  id="custom-tips"
+                  type="number"
+                  placeholder="Custom"
+                />
               </div>
             </div>
           </div>
 
+          <!-- people input -->
           <div class="people">
+            <p class="error" id="error-msg">Can't be zero</p>
             <label class="people-label" for="number">Number of people</label>
-            <input class="people-input" type="text" placeholder="People" />
+            <input
+              class="people-input"
+              id="people-input"
+              type="number"
+              placeholder="0"
+            />
           </div>
         </div>
+
         <div class="total-side">
           <div class="total-card">
-            <div class="total-tips">
-              <p>Tip Amount</p>
-              <span>/ person</span>
+            <div class="tip-amount">
+              <div class="tips-text">
+                <p class="tips-text-amount">Tip Amount</p>
+                <span class="tips-text-span">/ person</span>
+              </div>
+
+              <div class="total-tips">
+                <span class="tips-span" id="tips-amount">$0.00</span>
+              </div>
             </div>
 
-            <div class="total-person">
-              <p>Total</p>
-              <span>/ person</span>
+            <div class="person">
+              <div class="person-text">
+                <p class="person-text-total">Total</p>
+                <span class="person-text-span">/ person</span>
+              </div>
+              <div class="total-person">
+                <span class="person-span" id="person-amount">$0.00</span>
+              </div>
             </div>
-
-            <button class="reset">reset</button>
           </div>
+          <button class="reset">reset</button>
         </div>
       </div>
     </section>
@@ -80,5 +103,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
