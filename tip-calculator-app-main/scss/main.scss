@@ -1,7 +1,6 @@
-@import './variables';
-@import './mobile';
+@import "./variables";
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -11,9 +10,10 @@
 
 .attribution {
   text-align: center;
+  background-color: #c5e4e7;
 }
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
 }
 
 .main-section {
@@ -311,7 +311,7 @@ body {
   }
 }
 
-@media (max-width: 675px) {
+@media (max-width: 375px) {
   .card {
     width: 100%;
     height: 100%;
@@ -323,7 +323,8 @@ body {
   }
 
   .splitter {
-    left: 110px;
+    top: 60px;
+    left: 150px;
   }
 
   .bill-side {
@@ -356,6 +357,11 @@ body {
     }
   }
 
+  .error {
+    position: absolute;
+    left: 210px !important;
+  }
+
   .total-side {
     width: 100%;
     height: 100%;
@@ -366,5 +372,18 @@ body {
 
   .reset {
     margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1440px) {
+  .splitter {
+    top: 150px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .splitter {
+    top: 150px !important;
+    left: 800px !important;
   }
 }
